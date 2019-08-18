@@ -5,11 +5,16 @@ import SEO from '../../components/seo';
 import './styles.scss'
 import { graphql } from 'gatsby';
 
-const AboutPage = () => {
+const AboutPage = ({data}) => {
+  const {allMarkdownRemark: aboutContent} = data;
+
   return (
     <Layout>
       <SEO title="About"/>
       <h1>TODO Add Stuff to go here</h1>
+      {aboutContent.edges.map(({node: content}) => (
+        <p key={content.id} dangerouslySetInnerHTML={{__html: content.html}}></p>
+      ))}
     </Layout>
   )
 }
@@ -21,6 +26,7 @@ export const query = graphql`{
     ) {
       edges {
         node {
+          id
           frontmatter {
             desc
             path
