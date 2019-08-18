@@ -3,6 +3,8 @@ import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 import { graphql, Link } from "gatsby";
 
+import './styles.scss'
+
 const ChallengePage = ({ data }) => {
  const {allMarkdownRemark: challenge} = data;
 
