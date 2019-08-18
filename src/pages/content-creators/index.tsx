@@ -5,7 +5,9 @@ import SEO from "../../components/seo"
 import "./styles.scss"
 import { graphql } from "gatsby"
 
-const ContentCreatorsPage = () => {
+const ContentCreatorsPage = ({data}) => {
+  const {allMarkdownRemark: creators} = data;
+
   return (
     <Layout>
       <SEO title="Content Creators" />
@@ -14,6 +16,9 @@ const ContentCreatorsPage = () => {
         THis is where we can put links and little bios about each content
         creator for the server
       </h2>
+      {creators.edges.map(({node: creator}) =>(
+        <p key={creator.id} dangerouslySetInnerHTML={{__html: creator.html}}></p>
+      ))}
     </Layout>
   )
 }
@@ -27,6 +32,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          id
           frontmatter {
             desc
             path
