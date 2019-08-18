@@ -41,6 +41,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          id
           frontmatter {
             desc
             path

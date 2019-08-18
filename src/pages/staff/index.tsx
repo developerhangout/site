@@ -5,12 +5,17 @@ import SEO from "../../components/seo";
 import './styles.scss'
 import { graphql } from "gatsby";
 
-const StaffPage = () => {
+const StaffPage = ({data}) => {
+  const {allMarkdownRemark: staffs} = data;
+
   return (
     <Layout>
       <SEO title="Staff" />
       <h1>TODO Add Stuff to go here</h1>
       <h2>small bios for each staff member, including helpers ?? probs not</h2>
+      {staffs.edges.map(({node: staff}) => (
+        <p key={staff.id} dangerouslySetInnerHTML={{__html: staff.html}}></p>
+      ))}
     </Layout>
   )
 }
@@ -24,6 +29,7 @@ export const query = graphql`
            ) {
              edges {
                node {
+                 id
                  frontmatter {
                    desc
                    path
