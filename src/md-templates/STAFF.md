@@ -1,7 +1,7 @@
 ---
 type: staff
-path: ''
-title: Barbados Clemens
+path: template
+title: STAFF NAME
 desc: 'get to know the staff a bit more'
 ---
 

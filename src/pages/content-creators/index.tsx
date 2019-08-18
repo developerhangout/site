@@ -17,7 +17,11 @@ const ContentCreatorsPage = ({data}) => {
         creator for the server
       </h2>
       {creators.edges.map(({node: creator}) =>(
-        <p key={creator.id} dangerouslySetInnerHTML={{__html: creator.html}}></p>
+				<div key={creator.id}>
+					<h3>{creator.frontmatter.title}</h3>
+					<p dangerouslySetInnerHTML={{__html: creator.html}}></p>
+				</div>
+        
       ))}
     </Layout>
   )

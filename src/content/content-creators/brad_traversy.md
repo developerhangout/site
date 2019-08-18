@@ -1,11 +1,10 @@
 ---
 type: creator
-title: content creators in our community
-desc: check out all these cool cats who are apart of our community
+title: Brad Traversy
+desc: check out all these cool cats who are a part of our community
 path: ''
 ---
 
-# Brad Traversy
 Brad Traversy, the man, the myth, the legend.
 
 Brad started off building client websites for a company he created called Tech Guy Web Solutions and later on discovered his real passion was teaching web development & programming in a simple and understandable way. Brad now runs one of the top web dev & programming YouTube channels

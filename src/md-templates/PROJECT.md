@@ -1,12 +1,12 @@
 ---
 type: project
-path: ''
-title: 'something cool in nodejs'
+path: template
+title: Awesome Project Name
 desc: 'this is how I break apart atoms with node js'
 ---
 Tech used:
 - nodejs
 - atom splitter
 
-_some type of project link_
-_some type of demo link_
+Demo URL: (GitHub)[https://github.com]
+Repo URL: 

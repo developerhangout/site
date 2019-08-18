@@ -27,11 +27,13 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <Link to="/about">About</Link>
-      <Link to="/challenges">challenges</Link>
-      <Link to="/content-creators">content creators</Link>
-      <Link to="/projects">projects</Link>
-      <Link to="/staff">staff</Link>
+      <div className="navbar">
+        <Link to="/about">About</Link>
+        <Link to="/challenges">challenges</Link>
+        <Link to="/content-creators">content creators</Link>
+        <Link to="/projects">projects</Link>
+        <Link to="/staff">staff</Link>
+      </div>
     </div>
   </header>
 )

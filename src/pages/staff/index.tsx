@@ -14,7 +14,10 @@ const StaffPage = ({data}) => {
       <h1>TODO Add Stuff to go here</h1>
       <h2>small bios for each staff member, including helpers ?? probs not</h2>
       {staffs.edges.map(({node: staff}) => (
-        <p key={staff.id} dangerouslySetInnerHTML={{__html: staff.html}}></p>
+        <div key={staff.id}>
+          <h3>{staff.frontmatter.title}</h3>
+          <p dangerouslySetInnerHTML={{__html: staff.html}}></p>
+        </div>
       ))}
     </Layout>
   )
@@ -25,7 +28,7 @@ export default StaffPage;
 export const query = graphql`
          {
            allMarkdownRemark(
-             filter: { frontmatter: { type: { eq: "staff" } } }
+             filter: { frontmatter: { type: { eq: "staff" }, path: {ne: "template"} } }
            ) {
              edges {
                node {

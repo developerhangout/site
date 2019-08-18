@@ -19,11 +19,11 @@ const ChallengePage = ({ data }) => {
       </h2>
       {challenge.edges.map(({ node: post }) => {
         return (
-          <p key={post.id}>
-            {post.frontmatter.title}
-            {post.frontmatter.desc}
+          <div key={post.id}>
+            <h3>{post.frontmatter.title}</h3>
+            <p>{post.frontmatter.desc}</p>
             <Link to={post.frontmatter.path}>go to challenge</Link>
-          </p>
+          </div>
         )
       })}
     </Layout>
@@ -35,7 +35,7 @@ export default ChallengePage
 export const query = graphql`
   query RecentChallenges {
     allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "challenge" } } }
+      filter: { frontmatter: { type: { eq: "challenge" }, path: {ne: "template"} } }
       limit: 10
       sort: { fields: frontmatter___title, order: DESC }
     ) {

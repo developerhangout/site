@@ -1,11 +1,10 @@
 ---
 type: creator
-title: content creators in our community
-desc: check out all these cool cats who are apart of our community
+title: Gary Simon
+desc: check out all these cool cats who are a part of our community
 path: ''
 ---
 
-# Gary Simon
 Gary Simon here of the DesignCourse YouTube Channel! I started off with FrontPage 97 when I was in middle school (I'm 35 now, an old man in internet years). I loved the world of design and dev so much that I knew it's what I wanted to do. I skipped the college route and went straight into freelance work for quite awhile. 
 
 My very first tutorial was way back in 2006 (in written form). I started creating courses around 2012 for the Envato Network. Then, I published courses for DigitalTutors, Pluralsight, and a few for LinkedIn Learning (formerly Lynda.com). My channel (DesignCourse) has always been around for quite awhile, where I'm quite active these days.
