@@ -13,7 +13,7 @@ const ContentCreatorsPage = ({data}) => {
       <SEO title="Content Creators" />
       <h1>TODO Add Stuff to go here</h1>
       <h2>
-        THis is where we can put links and little bios about each content
+        This is where we can put links and little bios about each content
         creator for the server
       </h2>
       {creators.edges.map(({node: creator}) =>(
@@ -28,7 +28,7 @@ export default ContentCreatorsPage
 export const query = graphql`
   {
     allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "creator" } } }
+      filter: { frontmatter: {type: {eq: "creator"}, path: {ne: "template"}} }
     ) {
       edges {
         node {
