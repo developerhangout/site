@@ -3,6 +3,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo";
 
 import './styles.scss'
+import { graphql } from "gatsby";
 
 const ProjectsPage = () => {
   return (
@@ -15,3 +16,22 @@ const ProjectsPage = () => {
 }
 
 export default ProjectsPage
+
+export const query = graphql`
+         {
+           allMarkdownRemark(
+             filter: { frontmatter: { type: { eq: "project" } } }
+           ) {
+             edges {
+               node {
+                 frontmatter {
+                   desc
+                   path
+                   title
+                 }
+                 html
+               }
+             }
+           }
+         }
+       `

@@ -2,6 +2,7 @@
 path: /challenges/july-2019
 title: July 2019
 desc: "Make a frontend app about Walters's Burgers and Brews"
+type: challenge
 ---
 
 # Developer Hangout July 2019 Challenge

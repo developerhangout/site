@@ -3,6 +3,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo";
 
 import './styles.scss'
+import { graphql } from "gatsby";
 
 const StaffPage = () => {
   return (
@@ -15,3 +16,23 @@ const StaffPage = () => {
 }
 
 export default StaffPage;
+
+export const query = graphql`
+         {
+           allMarkdownRemark(
+             filter: { frontmatter: { type: { eq: "staff" } } }
+           ) {
+             edges {
+               node {
+                 frontmatter {
+                   desc
+                   path
+                   title
+                 }
+                 html
+               }
+             }
+           }
+         }
+       `
+

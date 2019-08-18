@@ -14,31 +14,33 @@ exports.createPages = ({actions, graphql}) => {
 
   return graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "challenge" } } }
+      ) {
         edges {
           node {
-            id
             frontmatter {
-              title
-              path
               desc
+              path
+              title
             }
+            html
           }
         }
       }
     }
   `).then(res => {
     if (!!res.errors) {
-      console.error(res.errors);
-      return Promise.reject(res.errors);
+      console.error(res.errors)
+      return Promise.reject(res.errors)
     }
 
-    res.data.allMarkdownRemark.edges.forEach(({node: challenge}) => {
+    res.data.allMarkdownRemark.edges.forEach(({ node: challenge }) => {
       createPage({
         path: challenge.frontmatter.path,
         component: challengeTemplate,
       })
-    });
+    })
   })
 
 }
