@@ -1,0 +1,46 @@
+$accent: #50acfc;
+$dark: #1a1824;
+$black: #0c0c0c;
+$white: #fff;
+
+html, body {
+    font-family: Montserrat, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: $dark;
+}
+
+/*============
+    Header
+============*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 32px;
+}
+
+.nav {
+    display: flex;
+
+    &__link, &__item {
+        color: $white;
+        text-decoration: none;
+        margin: 0 12px;
+    }
+
+    &__link:hover,
+    &__link:focus,
+    &__item:hover,
+    &__item:focus {
+        font-weight: bold;
+    }
+
+    &__sub-link-wrapper {
+        background-color: $black;
+
+        .nav__link {
+            display: block;
+        }
+    }
+}
