@@ -1,12 +1,16 @@
 # Developer Hangout Official Site
 
 ## How to develop
+
 > Site is build with [GatsbyJS](https://gatsbyjs.org)
+
 1. NodeJS latest LTS needs to be installed
 1. clone this repo
 1. `npm install`
 1. `npm run start` to start the develop server on localhost:8000
-  - graphql explorer is at localhost:8000/___graphql (highly recommend exploring)
+
+- graphql explorer is at localhost:8000/\_\_\_graphql (highly recommend exploring)
+
 1. `src/components` directory contains the react components
 1. `src/content` is where all the markdown files will be created and edited
 1. `src/pages` are the routed pages like `/about` or `/`
@@ -21,5 +25,6 @@ then you just pass the data as a _prop_ into your component i.e. `const compName
 happy hunting
 
 Color Pallet:
+
 - Dev Blue: #50acfc
 - Dev White: #fff

@@ -1,0 +1,77 @@
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 32px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    &__link, &__item {
+        color: $white;
+        text-decoration: none;
+        margin: 0 12px;
+        cursor: pointer;
+    }
+
+    &__link:hover,
+    &__link:focus,
+    &__item:hover,
+    &__item:focus {
+        font-weight: bold;
+    }
+
+    &__submenu--wrapper {
+        position: relative;
+        top: 6px;
+        padding-bottom: 12px;
+        box-sizing: border-box;
+    }
+
+    &__item:hover + .nav__submenu,
+    &__item:focus + .nav__submenu,
+    &__submenu--wrapper:hover .nav__submenu,
+    &__submenu--wrapper:focus .nav__submenu {
+        opacity: 1;
+        display: block;
+    }
+
+    &__submenu {
+        transition: opacity .3s ease-in-out;
+        display: none;
+        opacity: 0;
+        background-color: $black;
+        margin-top: 12px;
+        padding: 8px 4px;
+
+        position: absolute;
+        left: 12px;
+        white-space: nowrap;
+
+        &::before {
+            // Triangle on the submenu
+            position: absolute;
+            top: -24px;
+            left: 0;
+
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            
+            border-top: 12px solid transparent;
+            border-left: 8px solid transparent;
+            border-bottom: 12px solid $black;
+            border-right: 8px solid transparent;
+        }
+
+        .nav__link {
+            display: block;
+            margin: 4px 12px;
+        }
+    }
+}

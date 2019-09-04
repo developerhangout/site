@@ -1,0 +1,31 @@
+@import '../components/variables';
+
+main.home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .img-wrapper {
+        width: 40%;
+    }
+
+    .page-content {
+        &__title {
+            margin: 0;
+            font-weight: normal;
+            font-size: 48px;
+        }
+
+        &__lead {
+            font-size: 20px;
+        }
+
+        .btn-group {
+            margin-top: 24px;
+
+            .btn {
+                margin-right: 24px;
+            }
+        }
+    }
+}

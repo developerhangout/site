@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Developer Hangout",
     description: "A website for the developer hangout discord server",
-    author: "developerhangout"
+    author: "developerhangout",
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -23,5 +23,5 @@ module.exports = {
         path: `${__dirname}/src/content`,
       },
     },
-  ]
+  ],
 }

@@ -1,46 +1,82 @@
-$accent: #50acfc;
-$dark: #1a1824;
-$black: #0c0c0c;
-$white: #fff;
+@import 'variables';
+
+@import './header/style';
+@import './accordion/style';
 
 html, body {
     font-family: Montserrat, sans-serif;
     padding: 0;
     margin: 0;
     background-color: $dark;
+    color: $white;
+}
+
+/*==========
+    Global
+===========*/
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    font-weight: normal;
 }
 
 /*============
-    Header
+    Main
 ============*/
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 32px;
+
+main {
+    padding: 0 32px;
+    flex-grow: 1;
 }
 
-.nav {
-    display: flex;
+/*============
+    Footer
+============*/
 
-    &__link, &__item {
+footer {
+    padding: 8px 32px 8px 48px;
+}
+
+/*============
+    Components
+      - button
+============*/
+
+// Button
+.btn {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    margin: 0;
+    
+    padding: 4px 16px;
+
+    border-width: 1px;
+    border-style: solid;
+
+    &--primary {
+        background-color: $grey;
+        border-color: $grey;
+        color: $dark;
+
+        &:hover, &:focus {
+            background-color: $white;
+            border-color: $white;
+        }
+    }
+
+    &--secondary {
         color: $white;
-        text-decoration: none;
-        margin: 0 12px;
-    }
+        border-color: $white;
 
-    &__link:hover,
-    &__link:focus,
-    &__item:hover,
-    &__item:focus {
-        font-weight: bold;
-    }
-
-    &__sub-link-wrapper {
-        background-color: $black;
-
-        .nav__link {
-            display: block;
+        &:hover, &:focus {
+            background-color: transparentize(white, .9);
         }
     }
 }

@@ -1,0 +1,36 @@
+// Challenges Page
+
+.challenges-page {
+    text-align: center;
+
+    h1 {
+        margin: 120px 0 36px 0;
+    }
+
+    .content-desc {
+        width: 45%;
+        margin: 24px auto;
+    }
+
+    .row {
+        margin-top: 175px;
+
+        .card-c {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            margin: 24px 0;
+
+            a {
+                color: inherit;
+            }
+
+            h2 {
+                font-weight: normal;
+                min-width: 25%;
+                margin-left: 32px;
+            }
+        }
+    }
+}

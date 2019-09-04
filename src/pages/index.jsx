@@ -1,16 +1,47 @@
-import React from 'react'
-import Layout from '../components/layout/layout'
-import {Link} from 'gatsby'
+import React from "react"
+import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 
-const HomePage = () => (
-    <Layout>
-        <h1>Developer Hangout</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium eveniet assumenda quod? Laborum, asperiores inventore deserunt consequuntur minus, praesentium, unde aperiam quas totam quibusdam iste atque repudiandae sed soluta dolorum.</p>
-        <div>
-            <a href="https://discord.gg/developers" className="btn btn--primary">Join</a>
-            <Link to="/about" className="btn btn--secondary">About</Link>
-        </div>
-    </Layout>
+import "./index.scss"
+import Layout from "../components/layout/layout"
+
+const HomePage = ({ data }) => (
+  <Layout mainClass="home">
+    <figure className="img-wrapper">
+      <Img fluid={data.placeholder.childImageSharp.fluid} />
+    </figure>
+    <div className="page-content">
+      <h1 className="page-content__title">Developer Hangout</h1>
+      <p className="page-content__lead">
+        Join a discord community of over 12,000 developers, from noob to pro!
+      </p>
+      <div className="btn-group">
+        <a
+          href="https://discord.gg/developers"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn--primary"
+        >
+          Join
+        </a>
+        <Link to="/about" className="btn btn--secondary">
+          About
+        </Link>
+      </div>
+    </div>
+  </Layout>
 )
 
 export default HomePage
+
+export const pageQuery = graphql`
+  query HomeQuery {
+    placeholder: file(relativePath: { eq: "placeholder.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

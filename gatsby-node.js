@@ -1,5 +1,10 @@
 const path = require('path');
 
+const prettyDate = (date) => {  
+  const months = ['January', 'Febuary', 'March', 'April', 'May', "June", "July", "August", "September", "October", 'November', "December"];
+  return `${months[new Date(date).getMonth()]} ${new Date(date).getFullYear()}`
+}
+
 const makeRequest = (graphql, request) => new Promise((resolve, reject) => {
     // Query for nodes to use in creating pages.
     resolve(
@@ -16,14 +21,16 @@ const makeRequest = (graphql, request) => new Promise((resolve, reject) => {
 exports.createPages = ({actions, graphql}) => {
   const {createPage} = actions;
 
-  const getMarkdown = makeRequest(graphql, `
-    {
-      allMarkdownRemark {
+  const getChallenges = makeRequest(graphql, `
+  query {
+      allMarkdownRemark(filter: {frontmatter: {type: {eq: "challenge"}}}) {
         edges {
           node {
-            id
+            html
             frontmatter {
+              date
               title
+              repo
             }
           }
         }
@@ -32,15 +39,16 @@ exports.createPages = ({actions, graphql}) => {
   `)
     .then(result => {
       result.data.allMarkdownRemark.edges.forEach(({node}) => {
+        if(node.frontmatter.active === false) return;
         createPage({
-          path: `/${node.frontmatter.title.toLowerCase()}`,
-          component: path.resolve('./src/templates/greeting.jsx'),
-          context: {id: node.id}
+          path: `/challenges/${prettyDate(node.frontmatter.date).toLowerCase().replace(' ', '_')}`,
+          component: path.resolve('./src/templates/challenge.js'),
+          context: {...node}
         })
       })
     })
 
     return Promise.all([
-      getMarkdown
+      getChallenges
     ])
 }
