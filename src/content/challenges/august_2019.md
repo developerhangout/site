@@ -4,10 +4,8 @@ title: August 2019
 desc: Blah blah blah
 repo: https://github.com/developerhangout/july2019
 type: challenge
-active: false
+active: true
 ---
-
-# Developer Hangout July 2019 Challenge
 
 ## Rules
 

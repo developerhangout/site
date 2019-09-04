@@ -8,6 +8,7 @@ import Accordion from "../../components/accordion/index"
 const AboutPage = () => (
   <Layout>
     <h1>About</h1>
+    <p>Note: not finished yet</p>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
       voluptatum nostrum doloribus aut error inventore sunt, delectus aperiam
