@@ -5,18 +5,12 @@ import Layout from '../../components/layout/layout'
 import './style.scss'
 
 const ChallengesPage = ({data}) => {
-    
-    const prettyDate = (date) => {  
-        const months = ['January', 'Febuary', 'March', 'April', 'May', "June", "July", "August", "September", "October", 'November', "December"];
-        return `${months[new Date(date).getMonth()]} ${new Date(date).getFullYear()}`;
-    }
-
     return (
         <Layout mainClass="challenges-page">
             <h1>This Month's Challenge</h1>
             <div className="content-desc">{data.allMarkdownRemark.edges[0].node.frontmatter.desc}</div>
             <Link
-                to={`/challenges/${prettyDate(data.allMarkdownRemark.edges[0].node.frontmatter.date).toLowerCase().replace(' ', '_')}`}
+                to={`/challenges/${data.allMarkdownRemark.edges[0].node.frontmatter.date.toLowerCase().replace(' ', '_')}`}
                 className="btn btn--primary"
             >Go to Challenge</Link>
             <div className="row">
@@ -25,8 +19,8 @@ const ChallengesPage = ({data}) => {
                     return (
                         <div className="card-c" key={i}>
                             <h2>
-                                <Link to={`/challenges/${prettyDate(node.frontmatter.date).toLowerCase().replace(' ', '_')}`}>
-                                    {prettyDate(node.frontmatter.date)}
+                                <Link to={`/challenges/${node.frontmatter.date.toLowerCase().replace(' ', '_')}`}>
+                                    {node.frontmatter.date}
                                 </Link>
                             </h2>
                             <div className="section__desc">
@@ -60,7 +54,7 @@ query ChallengesQuery {
             node {
                 html
                 frontmatter {
-                    date
+                    date(formatString: "MMMM YYYY")
                     title
                     desc
                     repo

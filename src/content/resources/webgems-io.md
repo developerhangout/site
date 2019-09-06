@@ -1,8 +1,8 @@
 ---
-name: Webgems.io
+title: Webgems.io
 url: https://webgems.io
 user: lost
-img: default-resource.png
+featuredImage: ./default-resource.png
 type: resource
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: How not to get scammed
+slug: scamming
 type: about
 ---
 

@@ -1,0 +1,53 @@
+.paginate {
+    display: inline-block;
+
+    &__arrow, &__num, &__placeholder {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        
+        background: transparent;
+        border: 1px solid $grey;
+        text-decoration: none;
+        cursor: pointer;
+
+        width: 24px;
+        height: 24px;
+    }
+
+    &__placeholder {
+        opacity: .3;
+        user-select: none;
+        background-color: $grey;
+        color: $dark;
+    }
+
+    &__arrow {
+        background-color: $grey;
+        color: $dark;
+
+        &:hover {
+            background-color: darken($grey, 10);
+            border-color: darken($grey, 10);
+        }
+    }
+
+    &__num {
+        color: $grey;
+
+        &:hover {
+            background-color: transparentize($white, .8);
+        }
+
+        &--cur {
+            background-color: $accent;
+            color: $dark;
+            border-color: $accent;
+
+            &:hover {
+                background-color: transparentize($accent, .2);
+                border-color: transparentize($accent, .2);
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 ---
 title: Guidelines
+slug: guidelines
 type: about
 ---
 
