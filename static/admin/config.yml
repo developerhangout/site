@@ -28,8 +28,8 @@ collections:
       - { name: repo, label: Repository, default: "https://github.com/developerhangout/MonthYear"}
       - { name: body, label: Body, widget: markdown, hint: No H1 please!}
       - { name: active, label: Active, hint: Display this challenge?, widget: boolean}
-  creators
-  - name: content-
+  
+  - name: content-creators
     label: Content Creator
     folder: src/content/content-creators
     create: true
