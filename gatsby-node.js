@@ -1,4 +1,6 @@
 const path = require('path');
+const { createFilePath } = require(`gatsby-source-filesystem`)
+const {fmImagesToRelative} = require('gatsby-remark-relative-images');
 
 const prettyDate = (date) => {  
   const months = ['January', 'Febuary', 'March', 'April', 'May', "June", "July", "August", "September", "October", 'November', "December"];
@@ -109,4 +111,17 @@ exports.createPages = ({actions, graphql, reporter}) => {
       getProjects,
       getAboutDocs
     ])
+}
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+  fmImagesToRelative(node) 
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
 }

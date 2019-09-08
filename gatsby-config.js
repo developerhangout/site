@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     {
+      // This entry has to be the first or apparently the images will not work
       resolve:`gatsby-source-filesystem`,
       options:{
         path:`${__dirname}/static/assets`,
@@ -22,7 +23,14 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-relative-images`,
+        ]
+      }
+    },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
