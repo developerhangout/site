@@ -9,6 +9,7 @@ collections:
   - name: about
     label: About Document
     folder: src/content/about
+    delete: false
     fields:
       - { name: type, widget: hidden, default: about }
       - { name: slug, label: Path, hint: Usually the url-escaped title }
@@ -27,8 +28,8 @@ collections:
       - { name: repo, label: Repository, default: "https://github.com/developerhangout/MonthYear"}
       - { name: body, label: Body, widget: markdown, hint: No H1 please!}
       - { name: active, label: Active, hint: Display this challenge?, widget: boolean}
-  
-  - name: content-creators
+  creators
+  - name: content-
     label: Content Creator
     folder: src/content/content-creators
     create: true
