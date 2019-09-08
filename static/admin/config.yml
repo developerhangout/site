@@ -9,7 +9,6 @@ collections:
   - name: about
     label: About Document
     folder: src/content/about
-    create: true
     fields:
       - { name: type, widget: hidden, default: about }
       - { name: slug, label: Path, hint: Usually the url-escaped title }

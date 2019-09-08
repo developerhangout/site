@@ -5,6 +5,20 @@ module.exports = {
     author: "developerhangout",
   },
   plugins: [
+    {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        path:`${__dirname}/static/assets`,
+        name:`assets`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-netlify-cms-paths`,
+      options: {
+      // Path to your Netlify CMS config file
+      cmsConfig: `/static/admin/config.yml`
+      }
+    },
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
