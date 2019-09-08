@@ -6,7 +6,7 @@ module.exports = {
   },
   plugins: [
     {
-      // This entry has to be the first or apparently the images will not work
+      // This entry has to be the first, or apparently the images will not work
       resolve:`gatsby-source-filesystem`,
       options:{
         path:`${__dirname}/static/assets`,

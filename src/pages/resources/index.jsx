@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../../components/layout/layout"
 import "./style.scss"
 import { graphql } from "gatsby"
-import Img from 'gatsby-image'
 
 const ResourcesPage = ({data}) => (
   <Layout mainClass="resources">
@@ -10,9 +9,7 @@ const ResourcesPage = ({data}) => (
     <div className="card-r-wrapper">
       {data.allMarkdownRemark.edges.map(({node}, i) => (
         <div key={i} className="card-r">
-          <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} alt="" className="card-r__img" />
           <a href={node.frontmatter.url} className="card-r__title">{node.frontmatter.title}</a>
-          <p className="card-r__user">Reported by user <b>{node.frontmatter.user}</b></p>
           <div className="card-r__desc" dangerouslySetInnerHTML={{__html: node.html}} />
         </div>
       ))}
@@ -31,14 +28,6 @@ query ResourcesQuery {
         frontmatter {
           title
           url
-          user
-          featuredImage {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
         }
       }
     }

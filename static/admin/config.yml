@@ -25,8 +25,8 @@ collections:
       - { name: title, label: Title, hint: "Not \"August 2019\""}
       - { name: desc, label: Description, hint: Displayed on the Challenges page, widget: text}
       - { name: repo, label: Repository, default: "https://github.com/developerhangout/MonthYear"}
-      - { name: active, label: Active, hint: Display this challenge?, widget: boolean}
       - { name: body, label: Body, widget: markdown, hint: No H1 please!}
+      - { name: active, label: Active, hint: Display this challenge?, widget: boolean}
   
   - name: content-creators
     label: Content Creator
@@ -67,8 +67,6 @@ collections:
       - { name: type, widget: hidden, default: resource }
       - { name: title, label: Title, widget: "string" }
       - { name: url, label: URL, widget: "string" }
-      - { name: user, label: User, widget: "string", hint: Username of whoever submitted the resource }
-      - { name: featuredImage, label: Image, required: false, widget: "image", accept_multiple: false }
       - { name: body, label: Description, widget: markdown }
   
   - name: staff
