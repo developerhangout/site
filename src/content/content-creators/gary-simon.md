@@ -1,9 +1,12 @@
 ---
+type: content-creator
 name: Gary Simon
 username: GarySimon
-featuredImage: ./gary-simon.jpg
-socialLinks: [https://youtube.com/DesignCourse, https://coursetro.com, https://garysimon.com]
-type: content-creator
+featuredImage: /assets/gary-simon.jpg
+socialLinks:
+  - 'https://youtube.com/DesignCourse'
+  - 'https://coursetro.com'
+  - 'https://garysimon.com'
 ---
 
 Gary Simon here of the DesignCourse YouTube Channel! I started off with FrontPage 97 when I was in middle school (I'm 35 now, an old man in internet years). I loved the world of design and dev so much that I knew it's what I wanted to do. I skipped the college route and went straight into freelance work for quite awhile.
