@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "Developer Hangout",
-    description: "A website for the developer hangout discord server",
-    author: "developerhangout",
+    titleTemplate: "%s | Developer Hangout",
+    description: "A website for the developer hangout discord server"
   },
   plugins: [
     {
@@ -23,6 +23,7 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

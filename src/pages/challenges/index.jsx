@@ -1,12 +1,15 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../../components/layout/layout'
 import './style.scss'
+import Layout from '../../components/layout/layout'
+import SEO from '../../components/seo/index'
+
 
 const ChallengesPage = ({data}) => {
     return (
         <Layout mainClass="challenges-page">
+            <SEO title="Challenges" />
             <h1>This Month's Challenge</h1>
             <div className="content-desc">{data.allMarkdownRemark.edges[0].node.frontmatter.desc}</div>
             <Link

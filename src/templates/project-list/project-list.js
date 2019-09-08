@@ -1,12 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import './style.scss'
 import Layout from '../../components/layout/layout'
 import Paginate from '../../components/paginate/index'
-import './style.scss'
+import SEO from "../../components/seo/index"
 
 const ProjectListTemplate = ({ data, pageContext }) => (
 	<Layout mainClass="projects">
+		<SEO title="Projects" />
 		<h1>Projects</h1>
 		<header className="paginate-wrapper--top">
 			<Paginate pages={pageContext.numPages} cur={pageContext.currentPage} className="paginate--top" />

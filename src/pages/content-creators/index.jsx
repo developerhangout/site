@@ -4,9 +4,11 @@ import Img from "gatsby-image"
 
 import "./style.scss"
 import Layout from "../../components/layout/layout"
+import SEO from "../../components/seo/index"
 
 const CreatorsPage = ({ data }) => (
   <Layout mainClass="content-creators">
+      <SEO title="Content Creators" />
         <h1>Content Creators</h1>
         <div className="row">
             {data.allMarkdownRemark.edges.map(({node}, i) => (

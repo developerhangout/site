@@ -1,10 +1,13 @@
 import React from "react"
-import Layout from "../../components/layout/layout"
-import "./style.scss"
 import { graphql } from "gatsby"
+
+import "./style.scss"
+import Layout from "../../components/layout/layout"
+import SEO from "../../components/seo/index"
 
 const ResourcesPage = ({data}) => (
   <Layout mainClass="resources">
+    <SEO title="Resources" />
     <h1>Resources</h1>
     <div className="card-r-wrapper">
       {data.allMarkdownRemark.edges.map(({node}, i) => (

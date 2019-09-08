@@ -1,11 +1,14 @@
 import React from "react"
-import Layout from "../../components/layout/layout"
-import "./style.scss"
 import { graphql } from "gatsby"
 import Img from 'gatsby-image'
 
+import "./style.scss"
+import Layout from "../../components/layout/layout"
+import SEO from "../../components/seo/index"
+
 const staffPage = ({ data }) => (
   <Layout mainClass="staff">
+    <SEO title="Staff" />
     <h1>Staff</h1>
     <div className="row">
       {data.allMarkdownRemark.edges.map(({ node }, i) => (

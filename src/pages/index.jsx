@@ -1,15 +1,17 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
 import "./index.scss"
 import Layout from "../components/layout/layout"
+import SEO from "../components/seo/index"
 
 const HomePage = ({ data }) => (
   <Layout mainClass="home">
-    <figure className="img-wrapper">
+    <SEO title="Home" />
+    {/* <figure className="img-wrapper">
       <Img fluid={data.placeholder.childImageSharp.fluid} />
-    </figure>
+    </figure> */}
     <div className="page-content">
       <h1 className="page-content__title">Developer Hangout</h1>
       <p className="page-content__lead">

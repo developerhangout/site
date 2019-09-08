@@ -3,9 +3,11 @@ import {Link} from 'gatsby'
 
 import "./style.scss"
 import Layout from "../../components/layout/layout"
+import SEO from "../../components/seo/index"
 
 const AboutPage = () => (
   <Layout>
+    <SEO title="About" />
     <h1>About</h1>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
