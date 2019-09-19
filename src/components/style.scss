@@ -11,43 +11,35 @@ html, body {
     color: $white;
 }
 
-/*==========
-    Global
-===========*/
-
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+a {
+    color: $accent;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 h1 {
     font-weight: normal;
 }
-
-/*============
-    Main
-============*/
 
 main {
     padding: 0 32px;
     flex-grow: 1;
 }
 
-/*============
-    Footer
-============*/
-
 footer {
     padding: 8px 32px 8px 48px;
+    text-align: center;
 }
 
-/*============
-    Components
-      - button
-============*/
-
-// Button
 .btn {
     text-decoration: none;
     background-color: transparent;

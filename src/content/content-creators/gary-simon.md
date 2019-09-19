@@ -2,7 +2,7 @@
 type: content-creator
 name: Gary Simon
 username: GarySimon
-featuredImage: /assets/gary-simon.jpg
+featuredImage: ./gary-simon.jpg
 socialLinks:
   - 'https://youtube.com/DesignCourse'
   - 'https://coursetro.com'

@@ -26,13 +26,5 @@
             width: 30%;
             margin-right: 24px;
         }
-
-        a {
-            color: $accent;
-    
-            &:hover {
-                color: mix(white, $accent, 30);
-            }
-        }
     }
 }

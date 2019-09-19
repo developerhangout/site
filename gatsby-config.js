@@ -2,25 +2,10 @@ module.exports = {
   siteMetadata: {
     title: "Developer Hangout",
     titleTemplate: "%s | Developer Hangout",
-    description: "A website for the developer hangout discord server"
+    description: "The coolest place on the internet for Developers and anyone to hang out at!",
+    author: "https://discord.gg/developers",
   },
   plugins: [
-    {
-      // This entry has to be the first, or apparently the images will not work
-      resolve:`gatsby-source-filesystem`,
-      options:{
-        path:`${__dirname}/static/assets`,
-        name:`assets`
-      }
-    },
-    {
-      resolve: `gatsby-plugin-netlify-cms-paths`,
-      options: {
-      // Path to your Netlify CMS config file
-      cmsConfig: `/static/admin/config.yml`
-      }
-    },
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
@@ -28,9 +13,15 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-relative-images`,
-        ]
-      }
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+              showCaptions: true,
+            },
+          },
+        ],
+      },
     },
     `gatsby-plugin-sass`,
     {
@@ -45,6 +36,13 @@ module.exports = {
       options: {
         name: `content`,
         path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
   ],

@@ -16,11 +16,11 @@ const ProjectListTemplate = ({ data, pageContext }) => (
 		<div className="proj-wrapper">
 			{data.allMarkdownRemark.edges.map(({ node }, i) => (
 				<div className="proj" key={i}>
-					<p><b>Title:</b> {node.frontmatter.title}</p>
-					<p><b>User:</b> {node.frontmatter.user}</p>
-					<p><b>Date Submitted:</b> {node.frontmatter.date}</p>
-					<p><b>Tech Used:</b> {node.frontmatter.tech.join(', ')}</p>
-					<div><b>Links:</b>&nbsp;
+					<p><strong>Title:</strong> {node.frontmatter.title}</p>
+					<p><strong>User:</strong> {node.frontmatter.user}</p>
+					<p><strong>Date Submitted:</strong> {node.frontmatter.date}</p>
+					<p><strong>Tech Used:</strong> {node.frontmatter.tech.join(', ')}</p>
+					<div><strong>Links:</strong>&nbsp;
 						{node.frontmatter.links.site ? <a href={node.frontmatter.links.site}>Site</a> : null}
 						,&nbsp;
 						{node.frontmatter.links.demo ? <a href={node.frontmatter.links.demo}>Demo</a> : null}

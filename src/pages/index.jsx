@@ -1,17 +1,13 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-// import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 import "./index.scss"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo/index"
 
-const HomePage = ({ data }) => (
+const HomePage = () => (
   <Layout mainClass="home">
     <SEO title="Home" />
-    {/* <figure className="img-wrapper">
-      <Img fluid={data.placeholder.childImageSharp.fluid} />
-    </figure> */}
     <div className="page-content">
       <h1 className="page-content__title">Developer Hangout</h1>
       <p className="page-content__lead">
@@ -35,15 +31,3 @@ const HomePage = ({ data }) => (
 )
 
 export default HomePage
-
-export const pageQuery = graphql`
-  query HomeQuery {
-    placeholder: file(relativePath: { eq: "placeholder.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`

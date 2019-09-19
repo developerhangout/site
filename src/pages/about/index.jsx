@@ -6,7 +6,7 @@ import Layout from "../../components/layout/layout"
 import SEO from "../../components/seo/index"
 
 const AboutPage = () => (
-  <Layout>
+  <Layout mainClass="about">
     <SEO title="About" />
     <h1>About</h1>
     <p>
@@ -15,9 +15,11 @@ const AboutPage = () => (
       modi aliquam id accusamus culpa dolorem repellat cum ullam, reiciendis
       mollitia at.
     </p>
-    <Link to="/about/rules">Rules</Link>
-    <Link to="/about/guidelines">Guidelines</Link>
-    <Link to="/about/scamming">How not to get scammed</Link>
+    <ul>
+      <li><Link to="/about/rules">Rules</Link></li>
+      <li><Link to="/about/guidelines">Guidelines</Link></li>
+      <li><Link to="/about/scamming">How not to get scammed</Link></li>
+    </ul>
   </Layout>
 )
 

@@ -53,11 +53,7 @@
         }
 
         a {
-            color: darken($accent, 25);
-    
-            &:hover {
-                color: darken(mix(white, $accent, 30), 22);
-            }
+            color: darken($accent, 30);
         }
     }
 }

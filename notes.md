@@ -1,13 +1,8 @@
 # Notes
-## Netlify CMS
-  - found at `/admin/` (trailing slash is required)
-  - Important!: Netlify CMS is git-based, so you need to specify the branch to which it should commit any changes. Right now, it's set to `dev`.
-  - To enable it on a new netlify site, enable identity and git-gateway in the netlify settings, and then invite users by email under the identity tab.
-
 ## To Be Done
 
 ### Documents
-  *Rules*, *Guidelines*, and *How not to get scammed* should be filled in from the admin panel underneath **About Documents**
+  *Rules*, *Guidelines*, and *How not to get scammed* should be filled in
 
 ### SEO
   - Global Metadata are contained in `gatsby-config.js` under `siteMetadata`

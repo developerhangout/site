@@ -7,7 +7,7 @@ const Layout = ({ children, mainClass }) => (
   <div className="wrapper">
     <Header />
     <main className={mainClass}>{children}</main>
-    <footer>&copy; 2019 Developer Hangout</footer>
+    <footer>&copy; 2019 - {new Date().getFullYear()} Developer Hangout</footer>
   </div>
 )
 

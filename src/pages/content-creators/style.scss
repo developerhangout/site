@@ -23,15 +23,6 @@
             ul {
                 margin: 6px 0;
             }
-
-            a {
-                color: $accent;
-                text-decoration: none;
-
-                &:hover {
-                    color: mix(white, $accent, 30);
-                }
-            }
         }
 
         &__content {

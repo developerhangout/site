@@ -2,7 +2,7 @@
 type: staff
 name: Barbados Clemens
 username: Barbados Clemens
-featuredImage: /assets/barbados-sloth.png
+featuredImage: ./barbados-sloth.png
 ---
 
 - He's a cool cat who has been problem solving for many years.

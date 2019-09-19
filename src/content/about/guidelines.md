@@ -3,7 +3,6 @@ title: Guidelines
 slug: guidelines
 type: about
 ---
-
 Pudding cake cheesecake chocolate bar. Wafer cotton candy chocolate I love marshmallow. Lemon drops bear claw I love cupcake jelly jelly beans. Powder marzipan croissant dessert. Chocolate bar chocolate bar donut. Tiramisu macaroon cake macaroon toffee. Sweet chocolate cake marshmallow donut ice cream powder carrot cake. Oat cake marshmallow I love oat cake cheesecake. Brownie gummi bears I love chocolate cake cake jujubes dragée. Dessert cake tiramisu. Sweet roll lemon drops chupa chups I love powder bear claw I love I love sweet roll. Bear claw jelly beans sugar plum jujubes pastry tiramisu marzipan. Chupa chups candy cake lollipop cookie.
 
 Gummies dragée cookie chocolate bar. Donut I love jelly beans cake. Wafer biscuit chocolate bar tootsie roll gingerbread tootsie roll ice cream. Gummi bears marshmallow jelly tootsie roll jujubes muffin wafer. Brownie chupa chups sweet roll. Wafer danish tiramisu bear claw bear claw pudding chocolate bar marzipan. Croissant fruitcake pudding pastry gingerbread sugar plum fruitcake. Marzipan gummies tart dragée soufflé tiramisu toffee. Cake wafer caramels soufflé croissant tootsie roll. I love pastry oat cake gummi bears. I love cake cotton candy sesame snaps lollipop. Cupcake oat cake macaroon.

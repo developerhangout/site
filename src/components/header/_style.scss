@@ -22,7 +22,7 @@
     &__link:focus,
     &__item:hover,
     &__item:focus {
-        font-weight: bold;
+        text-decoration: underline;
     }
 
     &__submenu--wrapper {

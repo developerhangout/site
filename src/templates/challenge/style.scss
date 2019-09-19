@@ -33,13 +33,4 @@
             width: 24px;
         }
     }
-
-    a:not(.github-btn) {
-        color: $accent;
-        text-decoration: none;
-
-        &:hover {
-            color: mix(white, $accent, 30);
-        }
-    }
 }
