@@ -1,0 +1,74 @@
+@import 'variables';
+
+@import './header/style';
+@import './paginate/style';
+
+html, body {
+    font-family: Montserrat, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: $dark;
+    color: $white;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: $accent;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h1 {
+    font-weight: normal;
+}
+
+main {
+    padding: 0 32px;
+    flex-grow: 1;
+}
+
+footer {
+    padding: 8px 32px 8px 48px;
+    text-align: center;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    margin: 0;
+    
+    padding: 4px 16px;
+
+    border-width: 1px;
+    border-style: solid;
+
+    &--primary {
+        background-color: $grey;
+        border-color: $grey;
+        color: $dark;
+
+        &:hover, &:focus {
+            background-color: $white;
+            border-color: $white;
+        }
+    }
+
+    &--secondary {
+        color: $white;
+        border-color: $white;
+
+        &:hover, &:focus {
+            background-color: transparentize(white, .9);
+        }
+    }
+}

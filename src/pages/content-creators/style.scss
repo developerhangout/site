@@ -1,0 +1,40 @@
+@import '../../components/variables';
+
+.content-creators {
+    h1 {
+        text-align: center;
+    }
+
+    .row {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .card {
+        margin: 96px 0;
+
+        &__info {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                margin: 0;
+            }
+
+            ul {
+                margin: 6px 0;
+            }
+        }
+
+        &__content {
+            grid-column: 2/4;
+            font-size: 14px;
+        }
+        
+        &__image {
+            width: 200px;
+            height: 200px;
+            margin: 0 24px 24px 0;
+            float: left;
+        }
+    }
+}
